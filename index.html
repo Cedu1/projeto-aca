@@ -1,63 +1,69 @@
+<!doctype html>
 <html lang="pt-BR">
-    <head>
-      <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>ACA Transformadora - Loja Online</title>
-            <link rel="stylesheet" href="styles.css">
-            </head>
-            <body class="dark-theme">
-              <header>
-                  <div class="logo">
-                        <img src="./logo.png" alt="Logo ACA">
-                              <h1>ACA Transformadora</h1>
-                                  </div>
-                                      <nav>
-                                            <ul>
-                                                    <li><a href="#produtos">Produtos</a></li>
-                                                            <li><a href="#servicos">Serviços</a></li>
-                                                                    <li><a href="#contato">Contato</a></li>
-                                                                          </ul>
-                                                                              </nav>
-                                                                                </header>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja e-commerce ACA Transformadora - personalização automotiva e conforto premium.">
+  <meta name="keywords" content="loja, ACA, transformadora, automotivo, personalização, bancos, ar-condicionado">
+  <meta name="author" content="Carlos França">
+  <title>ACA Transformadora - Loja Online</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <header>
+    <div class="logo">
+      <img src="./logo.png" alt="Logo ACA Transformadora">
+      <h1>ACA Transformadora</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="https://aca.ind.br/pt-br/van/" target="_blank" aria-label="Ver produtos ACA">Produtos</a></li>
+        <li><a href="https://aca.ind.br/pt-br/servicos/" target="_blank" aria-label="Ver serviços ACA">Serviços</a></li>
+        <li><a href="https://aca.ind.br/pt-br/contacts/" target="_blank" aria-label="Falar com ACA">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="temaBtn" onclick="alternarTema()" aria-label="Alternar entre tema claro e escuro">☀️ / 🌙</button>
+  </header>
 
-                                                                                  <main>
-                                                                                      <section id="hero" class="hero">
-                                                                                            <h2>Transforme o interior do seu carro com conforto e estilo</h2>
-                                                                                                  <p>Ar-condicionado, estofamento e personalização automotiva de alto nível</p>
-                                                                                                        <a href="#produtos" class="btn">Ver produtos</a>
-                                                                                                            </section>
+  <main>
+    <section id="hero" class="hero">
+      <h2>Transforme o interior do seu carro com conforto e estilo</h2>
+      <p>Ar-condicionado, estofamento e personalização automotiva de alto nível</p>
+      <a href="#produtos" class="btn">Ver produtos</a>
+    </section>
 
-                                                                                                                <section id="produtos" class="produtos">
-                                                                                                                      <h2>Nossos Produtos</h2>
-                                                                                                                            <div class="grid">
-                                                                                                                                    <div class="card">
-                                                                                                                                              <img src="./bancotrans.png" alt="Banco automotivo premium">
-                                                                                                                                                        <h3>Banco Automotivo Premium</h3>
-                                                                                                                                                                  <p>Conforto e acabamento de primeira linha.</p>
-                                                                                                                                                                            <button onclick="contatoWhatsApp('Banco Automotivo Premium')">Comprar</button>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                            <div class="card">
-                                                                                                                                                                                                      <img src="./bancosoft.png" alt="Sistema de ar-condicionado automotivo">
-                                                                                                                                                                                                                <h3>boncos soft</h3>
-                                                                                                                                                                                                                          <p>Eficiência e conforto térmico garantidos.</p>
-                                                                                                                                                                                                                                    <button onclick="contatoWhatsApp('Ar Condicionado Automotivo')">Comprar</button>
-                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                    <div class="card">
-                                                                                                                                                                                                                                                              <img src="./bancoapoio.png" alt="Serviço de personalização de interior">
-                                                                                                                                                                                                                                                                        <h3>banco apoio de cabeça </h3>
-                                                                                                                                                                                                                                                                                  <p>Transforme o seu carro com um visual único.</p>
-                                                                                                                                                                                                                                                                                            <button onclick="contatoWhatsApp('Personalização de Interior')">Comprar</button>
-                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                              </section>
-                                                                                                                                                                                                                                                                                                                </main>
+    <section id="produtos" class="produtos">
+      <h2>Nossos Produtos</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="./bancotrans.png" alt="Banco automotivo premium de couro marrom" loading="lazy">
+          <h3>Banco Automotivo Premium</h3>
+          <p>Conforto e acabamento de primeira linha.</p>
+          <button onclick="contatoWhatsApp('Banco Automotivo Premium')" aria-label="Comprar Banco Automotivo Premium no WhatsApp">Comprar</button>
+        </article>
+        <article class="card">
+          <img src="./bancosoft.png" alt="Bancos automotivos soft cinza" loading="lazy">
+          <h3>Bancos Soft</h3>
+          <p>Eficiência e conforto garantidos.</p>
+          <button onclick="contatoWhatsApp('Bancos Soft')" aria-label="Comprar Bancos Soft no WhatsApp">Comprar</button>
+        </article>
+        <article class="card">
+          <img src="./bancoapoio.png" alt="Banco com apoio de cabeça automotivo" loading="lazy">
+          <h3>Banco com Apoio de Cabeça</h3>
+          <p>Transforme o seu carro com um visual único e ergonômico.</p>
+          <button onclick="contatoWhatsApp('Banco com Apoio de Cabeça')" aria-label="Comprar Banco com Apoio de Cabeça no WhatsApp">Comprar</button>
+        </article>
+      </div>
+    </section>
+  </main>
 
-                                                                                                                                                                                                                                                                                                                  <footer>
-                                                                                                                                                                                                                                                                                                                      <p>© 2025 ACA Transformadora - Todos os direitos reservados.</p>
-                                                                                                                                                                                                                                                                                                                        </footer>
+  <footer>
+    <p>© 2025 ACA Transformadora - Todos os direitos reservados.</p>
+    <address>Av. Tomás Carmeliano de Miranda, 1142 - Guatupê, São José dos Pinhais - PR</address>
+  </footer>
 
-                                                                                                                                                                                                                                                                                                                          <script src="script.js"></script>
-                                                                                                                                                                                                                                                                                                                          </body>
-                                                                                                                                                                                                                                                                                                                          </html>
-
-                                                                                                                                                                                                                                                                                                                          
+  <script src="script.js"></script>
+</body>
+</html>
