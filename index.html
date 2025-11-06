@@ -2,88 +2,99 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ACA Transformadora - Soluções em conforto e personalização automotiva.">
-  <meta name="keywords" content="ACA, transformadora, automotivo, ar-condicionado, bancos, conforto, personalização">
+  <meta name="description" content="ACA Transformadora - Conforto e personalização automotiva de alto nível.">
   <meta name="author" content="Carlos França">
-  <title>ACA Transformadora - Loja Online</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>ACA Transformadora</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="light-theme">
-  <!-- ===== Barra superior ===== -->
+
+  <!-- Topbar -->
   <div class="topbar">
-    <div class="contacts">
+    <div class="phones">
       <span>📞 +55 41 3098-8686</span>
       <span>📞 +55 41 3098-8650</span>
     </div>
-    <div class="flags">
-      <img src="https://flagcdn.com/w20/br.png" alt="Português" title="Português" onclick="changeLang('pt')">
-      <img src="https://flagcdn.com/w20/us.png" alt="English" title="English" onclick="changeLang('en')">
-      <img src="https://flagcdn.com/w20/es.png" alt="Español" title="Español" onclick="changeLang('es')">
+    <div class="languages">
+      <div class="lang-option" onclick="changeLang('pt')">
+        <img src="https://flagcdn.com/w20/br.png" alt="Português"> <span>Português</span>
+      </div>
+      <div class="lang-option" onclick="changeLang('en')">
+        <img src="https://flagcdn.com/w20/us.png" alt="English"> <span>English</span>
+      </div>
+      <div class="lang-option" onclick="changeLang('es')">
+        <img src="https://flagcdn.com/w20/es.png" alt="Español"> <span>Español</span>
+      </div>
     </div>
   </div>
 
-  <!-- ===== Cabeçalho ===== -->
+  <!-- Cabeçalho -->
   <header>
-    <div class="logo">
-      <img src="./logo.png" alt="Logo ACA Transformadora">
-      <h1 id="titulo">ACA Transformadora</h1>
+    <div class="header-content">
+      <div class="logo-area">
+        <img src="./logo.png" alt="Logo ACA Transformadora">
+        <div class="title">
+          <h1>ACA</h1>
+          <h2>Transformadora</h2>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#produtos" id="navProdutos">Produtos</a>
+        <a href="https://aca.ind.br/pt-br/servicos/" target="_blank" id="navServicos">Serviços</a>
+        <a href="https://aca.ind.br/pt-br/contacts/" target="_blank" id="navContato">Contato</a>
+      </nav>
+
+      <button id="temaBtn" onclick="alternarTema()">☀️ / 🌙</button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="https://aca.ind.br/pt-br/van/" target="_blank" id="navProdutos">Produtos</a></li>
-        <li><a href="https://aca.ind.br/pt-br/servicos/" target="_blank" id="navServicos">Serviços</a></li>
-        <li><a href="https://aca.ind.br/pt-br/contacts/" target="_blank" id="navContato">Contato</a></li>
-      </ul>
-    </nav>
-    <button id="temaBtn" onclick="alternarTema()">🌙 / ☀️</button>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section id="hero" class="hero">
-    <h2 id="heroTitulo">Soluções em Conforto e Estilo Automotivo</h2>
-    <p id="heroTexto">Personalize o interior do seu veículo com qualidade e tecnologia ACA</p>
-    <a href="#produtos" class="btn" id="btnProdutos">Ver Produtos</a>
+  <!-- Hero -->
+  <section class="hero">
+    <h2 id="heroTitulo">Transforme o interior do seu carro com conforto e estilo</h2>
+    <p id="heroTexto">Ar-condicionado, estofamento e personalização automotiva de alto nível</p>
+    <a href="#produtos" class="btn" id="btnProdutos">Ver produtos</a>
   </section>
 
-  <!-- ===== Produtos ===== -->
+  <!-- Produtos -->
   <section id="produtos" class="produtos">
     <h2 id="produtosTitulo">Nossos Produtos</h2>
     <div class="grid">
-      <article class="card">
-        <img src="./bancotrans.png" alt="Banco automotivo premium">
+      <div class="card">
+        <img src="./bancotrans.png" alt="Banco Automotivo Premium">
         <h3 id="prod1Nome">Banco Automotivo Premium</h3>
         <p id="prod1Desc">Conforto e acabamento de primeira linha.</p>
         <button onclick="contatoWhatsApp('Banco Automotivo Premium')" id="btn1">Comprar</button>
-      </article>
-      <article class="card">
-        <img src="./bancosoft.png" alt="Banco Soft Automotivo">
+      </div>
+
+      <div class="card">
+        <img src="./bancosoft.png" alt="Bancos Soft">
         <h3 id="prod2Nome">Bancos Soft</h3>
-        <p id="prod2Desc">Eficiência e conforto garantidos para longas viagens.</p>
+        <p id="prod2Desc">Eficiência e conforto garantidos.</p>
         <button onclick="contatoWhatsApp('Bancos Soft')" id="btn2">Comprar</button>
-      </article>
-      <article class="card">
-        <img src="./bancoapoio.png" alt="Banco com apoio de cabeça automotivo">
+      </div>
+
+      <div class="card">
+        <img src="./bancoapoio.png" alt="Banco com Apoio de Cabeça">
         <h3 id="prod3Nome">Banco com Apoio de Cabeça</h3>
-        <p id="prod3Desc">Design ergonômico e visual moderno.</p>
+        <p id="prod3Desc">Design moderno e conforto para o dia a dia.</p>
         <button onclick="contatoWhatsApp('Banco com Apoio de Cabeça')" id="btn3">Comprar</button>
-      </article>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Rodapé ===== -->
+  <!-- Rodapé -->
   <footer>
     <p>© 2025 ACA Transformadora - Todos os direitos reservados.</p>
-    <address id="endereco">Av. Tomás Carmeliano de Miranda, 1142 - Guatupê, São José dos Pinhais - PR</address>
   </footer>
 
-  <!-- ===== WhatsApp flutuante ===== -->
-  <a href="https://api.whatsapp.com/send?phone=554199653950" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+  <!-- WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=554199653950" class="whatsapp-float" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
 
   <script src="script.js"></script>
 </body>
-    </html>
+  </html>
