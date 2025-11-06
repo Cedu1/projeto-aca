@@ -47,7 +47,18 @@ header {
   align-items: center;
   gap: 10px;
 }
-.logo-area img { height: 45px; }
+.logo-area img {
+  height: 35px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo-area img {
+    height: 28px;
+    max-width: 100px;
+  }
+}
 .title h1 {
   font-size: 1.3rem;
   color: #002b80;
