@@ -4,66 +4,86 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Loja e-commerce ACA Transformadora - personalização automotiva e conforto premium.">
-  <meta name="keywords" content="loja, ACA, transformadora, automotivo, personalização, bancos, ar-condicionado">
+  <meta name="description" content="ACA Transformadora - Soluções em conforto e personalização automotiva.">
+  <meta name="keywords" content="ACA, transformadora, automotivo, ar-condicionado, bancos, conforto, personalização">
   <meta name="author" content="Carlos França">
   <title>ACA Transformadora - Loja Online</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-theme">
+<body class="light-theme">
+  <!-- ===== Barra superior ===== -->
+  <div class="topbar">
+    <div class="contacts">
+      <span>📞 +55 41 3098-8686</span>
+      <span>📞 +55 41 3098-8650</span>
+    </div>
+    <div class="flags">
+      <img src="./br.svg" alt="Português" title="Português" onclick="changeLang('pt')">
+      <img src="./us.svg" alt="English" title="English" onclick="changeLang('en')">
+      <img src="./es.svg" alt="Español" title="Español" onclick="changeLang('es')">
+    </div>
+  </div>
+
+  <!-- ===== Cabeçalho ===== -->
   <header>
     <div class="logo">
       <img src="./logo.png" alt="Logo ACA Transformadora">
-      <h1>ACA Transformadora</h1>
+      <h1 id="titulo">ACA Transformadora</h1>
     </div>
     <nav>
       <ul>
-        <li><a href="https://aca.ind.br/pt-br/van/" target="_blank" aria-label="Ver produtos ACA">Produtos</a></li>
-        <li><a href="https://aca.ind.br/pt-br/servicos/" target="_blank" aria-label="Ver serviços ACA">Serviços</a></li>
-        <li><a href="https://aca.ind.br/pt-br/contacts/" target="_blank" aria-label="Falar com ACA">Contato</a></li>
+        <li><a href="https://aca.ind.br/pt-br/van/" target="_blank" id="navProdutos">Produtos</a></li>
+        <li><a href="https://aca.ind.br/pt-br/servicos/" target="_blank" id="navServicos">Serviços</a></li>
+        <li><a href="https://aca.ind.br/pt-br/contacts/" target="_blank" id="navContato">Contato</a></li>
       </ul>
     </nav>
-    <button id="temaBtn" onclick="alternarTema()" aria-label="Alternar entre tema claro e escuro">☀️ / 🌙</button>
+    <button id="temaBtn" onclick="alternarTema()">🌙 / ☀️</button>
   </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <h2>Transforme o interior do seu carro com conforto e estilo</h2>
-      <p>Ar-condicionado, estofamento e personalização automotiva de alto nível</p>
-      <a href="#produtos" class="btn">Ver produtos</a>
-    </section>
+  <!-- ===== Seção Hero ===== -->
+  <section id="hero" class="hero">
+    <h2 id="heroTitulo">Soluções em Conforto e Estilo Automotivo</h2>
+    <p id="heroTexto">Personalize o interior do seu veículo com qualidade e tecnologia ACA</p>
+    <a href="#produtos" class="btn" id="btnProdutos">Ver Produtos</a>
+  </section>
 
-    <section id="produtos" class="produtos">
-      <h2>Nossos Produtos</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="./bancotrans.png" alt="Banco automotivo premium de couro marrom" loading="lazy">
-          <h3>Banco Automotivo Premium</h3>
-          <p>Conforto e acabamento de primeira linha.</p>
-          <button onclick="contatoWhatsApp('Banco Automotivo Premium')" aria-label="Comprar Banco Automotivo Premium no WhatsApp">Comprar</button>
-        </article>
-        <article class="card">
-          <img src="./bancosoft.png" alt="Bancos automotivos soft cinza" loading="lazy">
-          <h3>Bancos Soft</h3>
-          <p>Eficiência e conforto garantidos.</p>
-          <button onclick="contatoWhatsApp('Bancos Soft')" aria-label="Comprar Bancos Soft no WhatsApp">Comprar</button>
-        </article>
-        <article class="card">
-          <img src="./bancoapoio.png" alt="Banco com apoio de cabeça automotivo" loading="lazy">
-          <h3>Banco com Apoio de Cabeça</h3>
-          <p>Transforme o seu carro com um visual único e ergonômico.</p>
-          <button onclick="contatoWhatsApp('Banco com Apoio de Cabeça')" aria-label="Comprar Banco com Apoio de Cabeça no WhatsApp">Comprar</button>
-        </article>
-      </div>
-    </section>
-  </main>
+  <!-- ===== Produtos ===== -->
+  <section id="produtos" class="produtos">
+    <h2 id="produtosTitulo">Nossos Produtos</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="./bancotrans.png" alt="Banco automotivo premium">
+        <h3 id="prod1Nome">Banco Automotivo Premium</h3>
+        <p id="prod1Desc">Conforto e acabamento de primeira linha.</p>
+        <button onclick="contatoWhatsApp('Banco Automotivo Premium')" id="btn1">Comprar</button>
+      </article>
+      <article class="card">
+        <img src="./bancosoft.png" alt="Banco Soft Automotivo">
+        <h3 id="prod2Nome">Bancos Soft</h3>
+        <p id="prod2Desc">Eficiência e conforto garantidos para longas viagens.</p>
+        <button onclick="contatoWhatsApp('Bancos Soft')" id="btn2">Comprar</button>
+      </article>
+      <article class="card">
+        <img src="./bancoapoio.png" alt="Banco com apoio de cabeça automotivo">
+        <h3 id="prod3Nome">Banco com Apoio de Cabeça</h3>
+        <p id="prod3Desc">Design ergonômico e visual moderno.</p>
+        <button onclick="contatoWhatsApp('Banco com Apoio de Cabeça')" id="btn3">Comprar</button>
+      </article>
+    </div>
+  </section>
 
+  <!-- ===== Rodapé ===== -->
   <footer>
     <p>© 2025 ACA Transformadora - Todos os direitos reservados.</p>
-    <address>Av. Tomás Carmeliano de Miranda, 1142 - Guatupê, São José dos Pinhais - PR</address>
+    <address id="endereco">Av. Tomás Carmeliano de Miranda, 1142 - Guatupê, São José dos Pinhais - PR</address>
   </footer>
+
+  <!-- ===== Botão flutuante WhatsApp ===== -->
+  <a href="https://api.whatsapp.com/send?phone=554199653950" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <img src="./whatsapp.svg" alt="WhatsApp">
+  </a>
 
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
