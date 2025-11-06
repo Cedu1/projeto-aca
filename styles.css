@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +9,30 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== TEMA ESCURO ===== */
-body.dark-theme {
-  background-color: #0b0c10;
-  color: #e0e0e0;
+/* ===== Barra Superior ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f4f8;
+  color: #003366;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+}
+
+.topbar .contacts span {
+  margin-right: 1rem;
+}
+
+.flags img {
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flags img:hover {
+  transform: scale(1.1);
 }
 
 /* ===== Cabeçalho ===== */
@@ -22,7 +41,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1f2833;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -40,48 +60,52 @@ header {
 
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   list-style: none;
 }
 
 nav a {
-  color: #66fcf1;
   text-decoration: none;
-  transition: 0.3s;
+  color: #003366;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #45a29e;
+  color: #007BFF;
 }
 
 #temaBtn {
   background: none;
   border: none;
-  color: #66fcf1;
   font-size: 1.2rem;
   cursor: pointer;
+  color: #003366;
 }
 
 /* ===== Hero ===== */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #1f2833, #0b0c10);
+  background: linear-gradient(135deg, #007BFF, #0056A6);
+  color: #fff;
 }
 
 .btn {
   display: inline-block;
-  background-color: #45a29e;
-  color: #0b0c10;
+  margin-top: 1.2rem;
+  background-color: #fff;
+  color: #0056A6;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #66fcf1;
+  background-color: #003366;
+  color: #fff;
 }
 
 /* ===== Produtos ===== */
@@ -98,16 +122,16 @@ nav a:hover {
 }
 
 .card {
-  background-color: #1f2833;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(102, 252, 241, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 91, 197, 0.2);
 }
 
 .card img {
@@ -116,14 +140,15 @@ nav a:hover {
 }
 
 .card h3 {
-  color: #66fcf1;
+  color: #0056A6;
+  margin-top: 0.5rem;
 }
 
 .card button {
   margin-top: 10px;
   padding: 0.6rem 1rem;
-  background-color: #45a29e;
-  color: #0b0c10;
+  background-color: #007BFF;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -132,81 +157,57 @@ nav a:hover {
 }
 
 .card button:hover {
-  background-color: #66fcf1;
+  background-color: #0056A6;
 }
 
 /* ===== Rodapé ===== */
 footer {
-  background-color: #1f2833;
-  color: #c5c6c7;
+  background-color: #f0f4f8;
+  color: #003366;
   text-align: center;
   padding: 1.5rem;
   margin-top: 2rem;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero {
-    padding: 2rem 1rem;
-  }
+/* ===== Botão WhatsApp Flutuante ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 999;
 }
 
-/* ===== TEMA CLARO ===== */
-body.light-theme {
-  background-color: #f9f9f9;
-  color: #1f2833;
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
 }
 
-body.light-theme header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* ===== Tema Escuro ===== */
+body.dark-theme {
+  background-color: #0b0c10;
+  color: #e0e0e0;
 }
 
-body.light-theme nav a {
-  color: #0b0c10;
-}
-
-body.light-theme nav a:hover {
-  color: #45a29e;
-}
-
-body.light-theme .hero {
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
-  color: #0b0c10;
-}
-
-body.light-theme .card {
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e0e0e0;
-}
-
-body.light-theme .card h3 {
-  color: #0b0c10;
-}
-
-body.light-theme .card button {
+body.dark-theme header {
   background-color: #1f2833;
-  color: #ffffff;
 }
 
-body.light-theme .card button:hover {
-  background-color: #45a29e;
-  color: #0b0c10;
+body.dark-theme nav a {
+  color: #66fcf1;
 }
 
-body.light-theme footer {
-  background-color: #ffffff;
-  color: #555;
-  border-top: 1px solid #ddd;
-      }
+body.dark-theme .hero {
+  background: linear-gradient(135deg, #1f2833, #0b0c10);
+}
+
+body.dark-theme .card {
+  background-color: #1f2833;
+}
+
+body.dark-theme .card h3 {
+  color: #66fcf1;
+  }
