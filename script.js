@@ -1,4 +1,3 @@
-// ===== Contato WhatsApp =====
 function contatoWhatsApp(produto) {
   const numero = '554199653950';
   const mensagem = `Olá! Tenho interesse no produto: ${produto}`;
@@ -6,7 +5,6 @@ function contatoWhatsApp(produto) {
   window.open(url, '_blank');
 }
 
-// ===== Alternar Tema =====
 function alternarTema() {
   const body = document.body;
   body.classList.toggle('dark-theme');
@@ -14,7 +12,6 @@ function alternarTema() {
   localStorage.setItem('tema', temaAtual);
 }
 
-// ===== Carregar tema salvo =====
 window.onload = () => {
   const temaSalvo = localStorage.getItem('tema');
   if (temaSalvo === 'dark') document.body.classList.add('dark-theme');
@@ -22,7 +19,6 @@ window.onload = () => {
   changeLang(lang);
 };
 
-// ===== Tradução Automática =====
 const textos = {
   pt: {
     heroTitulo: "Soluções em Conforto e Estilo Automotivo",
@@ -35,12 +31,8 @@ const textos = {
     prod2Desc: "Eficiência e conforto garantidos para longas viagens.",
     prod3Nome: "Banco com Apoio de Cabeça",
     prod3Desc: "Design ergonômico e visual moderno.",
-    btn1: "Comprar",
-    btn2: "Comprar",
-    btn3: "Comprar",
-    navProdutos: "Produtos",
-    navServicos: "Serviços",
-    navContato: "Contato"
+    btn1: "Comprar", btn2: "Comprar", btn3: "Comprar",
+    navProdutos: "Produtos", navServicos: "Serviços", navContato: "Contato"
   },
   en: {
     heroTitulo: "Solutions in Automotive Comfort and Style",
@@ -53,12 +45,8 @@ const textos = {
     prod2Desc: "Efficiency and comfort for long trips.",
     prod3Nome: "Headrest Seat",
     prod3Desc: "Ergonomic design and modern look.",
-    btn1: "Buy Now",
-    btn2: "Buy Now",
-    btn3: "Buy Now",
-    navProdutos: "Products",
-    navServicos: "Services",
-    navContato: "Contact"
+    btn1: "Buy Now", btn2: "Buy Now", btn3: "Buy Now",
+    navProdutos: "Products", navServicos: "Services", navContato: "Contact"
   },
   es: {
     heroTitulo: "Soluciones en Confort y Estilo Automotriz",
@@ -71,16 +59,11 @@ const textos = {
     prod2Desc: "Eficiencia y confort garantizados para viajes largos.",
     prod3Nome: "Asiento con Apoyo de Cabeza",
     prod3Desc: "Diseño ergonómico y apariencia moderna.",
-    btn1: "Comprar",
-    btn2: "Comprar",
-    btn3: "Comprar",
-    navProdutos: "Productos",
-    navServicos: "Servicios",
-    navContato: "Contacto"
+    btn1: "Comprar", btn2: "Comprar", btn3: "Comprar",
+    navProdutos: "Productos", navServicos: "Servicios", navContato: "Contacto"
   }
 };
 
-// ===== Troca de idioma =====
 function changeLang(lang) {
   const langSet = textos[lang];
   Object.keys(langSet).forEach(id => {
@@ -88,4 +71,4 @@ function changeLang(lang) {
     if (el) el.innerText = langSet[id];
   });
   localStorage.setItem('lang', lang);
-}
+      }
